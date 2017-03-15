@@ -1,6 +1,8 @@
 const webpack = require('webpack')
 const webpackMerge = require('webpack-merge');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 
 const common = {
     // 対象のjsファイル
@@ -38,6 +40,26 @@ const common = {
         new webpack.ProvidePlugin({riot: 'riot'})
     ],
 };
+const common_scss = {
+    entry: {
+        common: './scss/common.scss' // コンパイル対象ファイルのpath
+    },
+    output: {
+        path: './build/', // コンパイル後に出力するpath
+        filename: '[name].css' // [name] には entry の key の値が入る（今回では common ）
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader?minimize!sass-loader")
+            }
+        ]
+    },
+    plugins: [
+        new ExtractTextPlugin('[name].css')
+    ]
+}
 
 config = '';
 console.log(process.env.NODE_ENV);
@@ -70,4 +92,4 @@ if (process.env.NODE_ENV === 'production') {
         ]
     });
 }
-module.exports = config;
+module.exports = [config,common_scss];
