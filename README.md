@@ -6,13 +6,22 @@ https://nodejs.org/en/download/
 ## run
 
 ```
-git clone https://github.com/yamaguci-dos/riot-webpack.git
+$ git clone https://github.com/yamaguci-dos/riot-webpack.git
 
-cd riot-webpack
+$ cd riot-webpack
 
-npm install
+$ npm install
 
-npm run build
+$ npm run build
 
-open index.html
+$ open index.html
+```
+
+## update dev tools
+check dependencies version in package.json 
+
+```
+$ npm install -g npm-check-updates
+
+$ ncu //check and read message
 ```
