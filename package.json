@@ -21,16 +21,16 @@
     "babel-preset-es2015-riot": "^1.1.0",
     "cross-env": "^3.2.4",
     "css-loader": "^0.27.3",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.1.0",
     "node-sass": "^4.5.0",
     "rimraf": "2.6.1",
     "riot": "^3.3.2",
     "riot-route": "^3.1.0",
-    "riotjs-loader": "^4.0.0",
-    "sass-loader": "^4.1.1",
+    "riot-tag-loader": "^1.0.0",
+    "sass-loader": "^6.0.3",
     "style-loader": "^0.14.0",
     "unminified-webpack-plugin": "^1.2.0",
-    "webpack": "^1.5.3",
+    "webpack": "^2.2.1",
     "webpack-merge": "^4.0.0"
   }
 }
