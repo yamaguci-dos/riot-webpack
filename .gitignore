@@ -214,3 +214,4 @@ fabric.properties
 .idea/riot-webpack.iml
 .idea/watcherTasks.xml
 build/
+/dist/
